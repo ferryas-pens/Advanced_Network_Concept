@@ -413,6 +413,35 @@ These sources are recommended pre/post session:
    * Why TLS (HTTPS) is mandatory in modern environments.
 
 ---
+## Referensi :
+1. Evolusi HTTP (0.9 → 1.1 → 2 → 3)
+   [https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP)  ([developer.mozilla.org][1])
+2. RFC 2616 – HTTP/1.1 klasik (struktur request/response, header, semantics)
+   [https://datatracker.ietf.org/doc/html/rfc2616](https://datatracker.ietf.org/doc/html/rfc2616)  ([datatracker.ietf.org][2])
+3. Ringkas sejarah HTTP hingga HTTP/3 (2025 insight)
+   [https://www.innoq.com/en/blog/2025/04/a-brief-history-of-http/](https://www.innoq.com/en/blog/2025/04/a-brief-history-of-http/)  ([innoq.com][7])
+4. HTTP in Depth (perbedaan 1.0 vs 1.1 vs keep-alive)
+   [https://medium.com/%40ahmadfarag/http-in-depth-dfdac806c2c0](https://medium.com/%40ahmadfarag/http-in-depth-dfdac806c2c0)  ([Medium][10])
+5. Wireshark User Guide (dasar, cara baca paket, follow stream)
+   [https://www.wireshark.org/docs/wsug_html/](https://www.wireshark.org/docs/wsug_html/)  ([Wireshark][4])
+6. Follow TCP Stream di Wireshark (langkah demi langkah)
+   [https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html)  ([Wireshark][3])
+7. Analisis TCP Handshake dan Stream di Wireshark (contoh praktis + keamanan)
+   [https://www.geeksforgeeks.org/ethical-hacking/tcp-analysis-using-wireshark/](https://www.geeksforgeeks.org/ethical-hacking/tcp-analysis-using-wireshark/)  ([geeksforgeeks.org][5])
+8. Filter Wireshark untuk analisis trafik dan ancaman
+   [https://www.freecodecamp.org/news/use-wireshark-filters-to-analyze-network-traffic/](https://www.freecodecamp.org/news/use-wireshark-filters-to-analyze-network-traffic/)  ([freecodecamp.org][11])
+9. HTTP/3 dan QUIC (bagaimana web modern pindah dari TCP ke UDP/QUIC)
+   [https://blog.cloudflare.com/http-3-from-root-to-tip/](https://blog.cloudflare.com/http-3-from-root-to-tip/)  ([blog.cloudflare.com][12])
 
-That’s the full English version.
-You can paste this into your LMS / course notes for “Week 6: Web Server Behavior, HTTP over TCP, and PCAP Analysis.”
+[1]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP?utm_source=chatgpt.com "Evolution of HTTP - MDN Web Docs"
+[2]: https://datatracker.ietf.org/doc/html/rfc2616?utm_source=chatgpt.com "RFC 2616 - Hypertext Transfer Protocol -- HTTP/1.1"
+[3]: https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html?utm_source=chatgpt.com "7.2. Following Protocol Streams"
+[4]: https://www.wireshark.org/docs/wsug_html/?utm_source=chatgpt.com "Wireshark User's Guide"
+[5]: https://www.geeksforgeeks.org/ethical-hacking/tcp-analysis-using-wireshark/?utm_source=chatgpt.com "TCP Analysis using Wireshark"
+[6]: https://en.wikipedia.org/wiki/HTTP?utm_source=chatgpt.com "HTTP"
+[7]: https://www.innoq.com/en/blog/2025/04/a-brief-history-of-http/?utm_source=chatgpt.com "A Brief History of HTTP"
+[8]: https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTCPAnalysis.html?utm_source=chatgpt.com "7.5. TCP Analysis"
+[9]: https://labex.io/tutorials/wireshark-analyze-tcp-traffic-with-wireshark-follow-tcp-stream-feature-415946?utm_source=chatgpt.com "Analyze TCP Traffic with Wireshark Follow TCP Stream ..."
+[10]: https://medium.com/%40ahmadfarag/http-in-depth-dfdac806c2c0?utm_source=chatgpt.com "HTTP In Depth. HTTP | by Ahmad Farag"
+[11]: https://www.freecodecamp.org/news/use-wireshark-filters-to-analyze-network-traffic/?utm_source=chatgpt.com "How to Use Wireshark Filters to Analyze Your Network Traffic"
+[12]: https://blog.cloudflare.com/http-3-from-root-to-tip/?utm_source=chatgpt.com "HTTP/3: From root to tip"
