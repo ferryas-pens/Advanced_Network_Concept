@@ -1,5 +1,5 @@
 #  Modul Praktikum HTTP Tingkat Lanjut (v2)
-## **Eksperimen dan Analisis Performa HTTP/2 dan HTTP/3 — Lengkap dengan Hands-on dan Kode**
+## **Eksperimen dan Analisis Performa HTTP/2 dan HTTP/3 **
 
 ---
 
