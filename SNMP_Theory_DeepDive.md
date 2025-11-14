@@ -83,7 +83,7 @@ flowchart TB
     ifHCInOctets10 --> idx3[".3 (ifIndex=3)"]
 ```
 
-### 3.2 SMI dan Tipe Data
+### 3.2 SMI (Structured Managemenet Information) dan Tipe Data
 **SMI** mendefinisikan tipe dasar seperti `INTEGER`, `OCTET STRING`, `OBJECT IDENTIFIER`, dan tipe numerik khusus jaringan: `Counter32`, `Counter64`, `Gauge32`, `TimeTicks`.  
 - **Counter32/64**: monoton naik; *wrap-around* saat penuh; untuk menghitung **rate**, ambil selisih `Δcounter / Δt`.  
 - **Gauge32**: nilai sesaat (bisa naik/turun), contoh: temperatur.  
