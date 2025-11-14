@@ -1,10 +1,7 @@
 # Dasar Teori SNMP
 
 
----
 
-## Abstrak
-Simple Network Management Protocol (SNMP) adalah standar IETF yang sejak dekade 1990-an menjadi tulang punggung manajemen jaringan di perangkat seperti router, switch, firewall, UPS, sensor lingkungan, dan server. Walau ekosistem observability modern menyertakan telemetry model-driven (gNMI/YANG), tracing, dan logs terstruktur, SNMP masih relevan berkat dukungan vendor yang luas dan skema informasi yang terstandardisasi (MIB/SMI/OID). Dokumen ini mengupas teori SNMP secara mendalam, mencakup arsitektur manager/agent, representasi data (MIB, SMI, OID, textual conventions), operasi (GET/GETNEXT/GETBULK/SET, TRAP/INFORM), keamanan SNMPv3 (USM/VACM, autentikasi, privasi, timeliness), transport (UDP, TLS/DTLS), performa dan skalabilitas (counter wrap, GETBULK tuning, LLD), hingga praktik rekayasa (perhitungan laju dari counter, indeks tabel, RowStatus), serta integrasi dengan platform monitoring modern seperti Zabbix. Disertakan diagram Mermaid untuk memperjelas alur dan antarmuka, serta tautan pembelajaran _primer_ (RFC dan dokumentasi resmi).
 
 ---
 
