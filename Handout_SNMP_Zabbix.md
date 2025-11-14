@@ -1,10 +1,4 @@
-# Handout Terpadu — SNMP Monitoring & Observability dengan **Zabbix**
-**Generated:** 2025-11-14 01:33  
-
-Dokumen ini merevisi handout sebelumnya: seluruh arsitektur dipindahkan dari Prometheus/snmp_exporter ke **Zabbix** agar lebih mudah dioperasikan di kelas dan produksi mini. Konten mencakup ringkasan teori **SNMP**, arsitektur **Zabbix** (Server/Proxy/Agent/DB/Web), diagram **Mermaid** (sequence, topologi, HA), serta **langkah praktikum** end-to-end dengan **SNMPv3** dan integrasi **SNMP traps**.
-
-> Render Mermaid langsung di GitHub/GitLab, VS Code (Mermaid Preview), atau https://mermaid.live
-
+# Handout — SNMP Monitoring & Observability dengan **Zabbix**
 ---
 
 ## 1) Kerangka Konseptual Singkat
@@ -51,7 +45,7 @@ sequenceDiagram
     Note over ZS: Interval polling (mis. 30s)
     ZS->>DV: SNMPv3 GETBULK IF-MIB::ifTable
     DV-->>ZS: Response (ifHCIn/OutOctets, ifOperStatus, errors, discards)
-    ZS->>DB: Tulis nilai; hitung rate (Δcounter/Δt)*8 → bps
+    ZS->>DB: Tulis nilai dan hitung rate (Δcounter/Δt)*8 bps
     UI->>DB: Query historis untuk grafik/panel
     DB-->>UI: Data time-series untuk visualisasi & trigger
 ```
@@ -123,7 +117,7 @@ flowchart TB
       REP[[Replicator/Cluster]]
     end
 
-    subgraph Proxies[Zabbix Proxies (Distributed)]
+    subgraph Proxies[Zabbix Proxies Distributed]
       PX1[Proxy Site-A]
       PX2[Proxy Site-B]
     end
@@ -147,6 +141,7 @@ flowchart TB
 
     classDef ha fill:#f3fff3,stroke:#39a845,stroke-width:1px;
     class ZS1,ZS2,VIP,PG1,PG2,REP,PX1,PX2 ha
+
 ```
 
 ---
