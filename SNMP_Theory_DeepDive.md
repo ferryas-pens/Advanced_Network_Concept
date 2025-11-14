@@ -175,16 +175,17 @@ SNMPv3 memperkenalkan **USM (User-based Security Model)** untuk autentikasi (**a
 
 ```mermaid
 flowchart LR
-    subgraph USM[USM Processing (SNMPv3)]
-      U1[Parse msgGlobalData<br/>engineID, boots, time]
-      U2[Verify timeliness<br/>(anti-replay)]
-      U3[Check auth (HMAC)]
-      U4[Decrypt priv (AES/DES)]
-      U5[Extract scopedPDU<br/>contextEngineID/contextName]
+    subgraph USM ["USM Processing (SNMPv3)"]
+      U1["Parse msgGlobalData<br/>engineID, boots, time"]
+      U2["Verify timeliness<br/>(anti-replay)"]
+      U3["Check auth (HMAC)"]
+      U4["Decrypt priv (AES/DES)"]
+      U5["Extract scopedPDU<br/>contextEngineID/contextName"]
     end
     U1 --> U2 --> U3 --> U4 --> U5
     classDef usm fill:#fff7e6,stroke:#e0a100,stroke-width:1px;
     class U1,U2,U3,U4,U5 usm
+
 ```
 
 ### 5.2 VACM (Views & Access)
@@ -195,10 +196,10 @@ flowchart TB
     subgraph VACM[View-based Access Control Model]
       U[User SNMPv3]
       G[Group]
-      C[Context (logical MIB space)]
-      Vread[View: read-view (subtree OID)]
-      Vwrite[View: write-view (subtree OID)]
-      Vnotify[View: notify-view (subtree OID)]
+      C[Context - logical MIB space]
+      Vread[View: read-view subtree OID]
+      Vwrite[View: write-view subtree OID]
+      Vnotify[View: notify-view subtree OID]
     end
     U --> G
     G --> C
