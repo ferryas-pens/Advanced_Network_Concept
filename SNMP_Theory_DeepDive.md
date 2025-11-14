@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Pengantar & Motivasi
+## 1. Pengantar 
 Jaringan modern—kampus, enterprise, hingga operator—mengoperasikan ratusan hingga puluhan ribu perangkat dengan heterogenitas tinggi. Tanpa standar manajemen, setiap vendor akan memaksakan antarmuka proprietary untuk membaca status dan mengonfigurasi perangkat. SNMP hadir sebagai **bahasa bersama** yang sederhana, efisien, dan cukup terstruktur untuk memantau keadaan perangkat serta mendapatkan notifikasi peristiwa. Walaupun kritik terhadap SNMP mencakup keamanan awal (v1/v2c) dan overhead polling, dua hal ini dapat dimitigasi dengan **SNMPv3** (authPriv), pemilihan OID yang tepat, interval yang moderat, dan kombinasi dengan mekanisme event semisal TRAP/INFORM.
 
 **Tujuan pembelajaran:**  
