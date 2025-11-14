@@ -1,11 +1,12 @@
-# Handout SNMP Monitoring, Telemetri, dan Observability
+# Handout — SNMP Monitoring, Telemetri, dan Observability
 
+---
 
 
 ## 1) Kerangka Konseptual Singkat
 Dalam operasi jaringan, **monitoring** adalah pengawasan indikator kinerja yang sudah ditetapkan (CPU, throughput, loss), **telemetri** adalah data mentah yang dipancarkan sistem (metrics/logs/traces/flows), sedangkan **observability** adalah kemampuan menyimpulkan kondisi internal dari sinyal eksternal (metrics–logs–traces; pada jaringan ditambah **flow records**). Untuk perangkat jaringan, **SNMP** tetap menjadi fondasi telemetri paling luas dukungannya, meski kini dilengkapi model-driven telemetry (gNMI/YANG), flow (NetFlow/IPFIX/sFlow), dan eBPF host-level.
 
----
+
 
 ## 2) Teori SNMP
 **Arsitektur:** model _manager/agent_. **Agent** di perangkat mengekspor objek manajemen via **MIB** (Management Information Base) dengan identitas **OID**; **Manager (NMS)** melakukan **polling** (GET/GETNEXT/GETBULK) dan menerima **TRAP/INFORM** (notifikasi asinkron). Transport standar: **UDP/161** (query) & **UDP/162** (trap).  
@@ -26,7 +27,7 @@ Dalam operasi jaringan, **monitoring** adalah pengawasan indikator kinerja yang 
 - **Counter32** overflow di link cepat → gunakan **Counter64** (`ifHCIn/OutOctets`).  
 - Skalabilitas: gunakan polling hierarkis, subset OID, atau kombinasikan dengan telemetry streaming.
 
----
+
 
 ## 3) Diagram Sequence SNMP
 
@@ -84,15 +85,15 @@ flowchart LR
     end
 
     subgraph Monitor_VM[Monitor VM / Server]
-      E[snmp_exporter<br/>(HTTP :9116)]
-      P[Prometheus<br/>(HTTP :9090)]
-      G[Grafana<br/>(HTTP :3000)]
-      T[snmptrapd<br/>(UDP :162)]
+      E[snmp_exporter<br/>- HTTP :9116]
+      P[Prometheus<br/>- HTTP :9090]
+      G[Grafana<br/>-HTTP :3000]
+      T[snmptrapd<br/>-UDP :162]
       AM[Alertmanager]
     end
 
     subgraph Optional_LongTerm[Long-term Storage]
-      LT[TSDB/ObjStore<br/>(remote_write)]
+      LT[TSDB/ObjStore<br/>- remote_write]
     end
 
     %% Arah komunikasi
@@ -118,7 +119,7 @@ flowchart TB
       E2[snmp_exporter-2]
     end
 
-    subgraph Devices[Devices (SNMPv3)]
+    subgraph Devices[Devices - SNMPv3]
       D1[Site-A Devices]
       D2[Site-B Devices]
     end
@@ -131,7 +132,7 @@ flowchart TB
     end
 
     subgraph Storage[Long-term & HA Alerting]
-      VM[VictoriaMetrics/Thanos<br/>(remote_write)]
+      VM[VictoriaMetrics/Thanos<br/>- remote_write]
       AMC[Alertmanager Cluster]
     end
 
