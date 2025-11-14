@@ -1,9 +1,5 @@
-# Handout Terpadu — SNMP Monitoring, Telemetri, dan Observability
-**Generated:** 2025-11-14 01:19  
+# Handout SNMP Monitoring, Telemetri, dan Observability
 
-Dokumen ini menggabungkan handout teori SNMP dan seluruh diagram Mermaid (sequence, topologi, dan rancangan ketersediaan). Dapat dirender pada GitHub/GitLab, VS Code (Mermaid Preview), atau https://mermaid.live.
-
----
 
 
 ## 1) Kerangka Konseptual Singkat
