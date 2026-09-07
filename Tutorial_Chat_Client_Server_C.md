@@ -3822,8 +3822,4 @@ Seluruh URL diperiksa pada 30 Agustus 2026. Semuanya dapat diakses tanpa langgan
 | [S23] | RFC 9325, Recommendations for Secure Use of TLS and DTLS, https://www.rfc-editor.org/rfc/rfc9325.txt | §12.1 |
 | [S24] | RFC 8446, The Transport Layer Security (TLS) Protocol Version 1.3, edisi 2018, https://www.rfc-editor.org/rfc/rfc8446.html | §12 |
 
-**Catatan verifikasi.** [S1] sampai [S12], [S14] sampai [S24] dikonfirmasi keberadaannya lewat pencarian terbatas domain pada 30 Agustus 2026. [S13] merujuk dokumen NIST yang sudah dipakai pada dokumen ajar lain di program studi ini; halaman `csrc.nist.gov` untuk dokumen tersebut **belum diverifikasi ulang pada sesi penyusunan ini** dan perlu dicek sebelum publikasi.
 
-**Satu catatan versi yang perlu perhatian.** Spesifikasi TLS 1.3 kini terbit dalam dua edisi, yaitu RFC 8446 tahun 2018 [S24] dan RFC 9846 yang merupakan hasil kerja `draft-ietf-tls-rfc8446bis` [S18]. Keberadaan kedua dokumen sudah dikonfirmasi, tetapi **hubungan resmi antara keduanya, yaitu apakah RFC 9846 benar-benar berstatus obsoletes terhadap RFC 8446, belum diverifikasi** pada sesi ini karena pengambilan halaman penuh tidak tersedia. Periksa header dokumen sebelum mengutipnya di publikasi resmi. Bila Anda hanya butuh satu rujukan untuk pengajaran, RFC 8446 tetap akurat untuk seluruh perilaku yang dibahas di sini.
-
-Halaman manual juga tersedia luring di mesin Anda, misalnya `man 2 poll` dan `man 7 tcp`. Untuk keperluan praktikum, halaman luring lebih dianjurkan karena versinya cocok dengan sistem yang Anda pakai.
